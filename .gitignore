@@ -1,0 +1,3 @@
+.arduinoOutput/
+.vscode/
+eeprom.hex

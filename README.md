@@ -22,7 +22,7 @@ Wiring RF24 radio / SPI1
 * CE	PB0 (default)
 * IRQ	NA
 
-![wiring of STM32F1 and NRF24](mysensors.STM32F103 bluepill+RF24接线图_bb.png)
+![wiring of STM32F1 and NRF24](images/mysensors.STM32F103.bluepill+RF24接线图_bb.png?raw=true)
 
 ## Dependencies
 ### development

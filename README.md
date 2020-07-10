@@ -12,17 +12,18 @@
 
 ## Hardware wiring
 
-ref: MySensors\hal\architecture\STM32F1\MyHwSTM32F1.cpp
+[MySensors](https://github.com/mysensors/MySensors/)\hal\architecture\STM32F1\MyHwSTM32F1.cpp
 Wiring RF24 radio / SPI1
---------------------------------------------------
-* CLK	PA5
-* MISO	PA6
-* MOSI	PA7
-* CSN	PA4
-* CE	PB0 (default)
-* IRQ	NA
+RF24 pin|STM32F1 pin
+--------|------------
+CLK     |	PA5
+MISO	|   PA6
+MOSI	|   PA7
+CSN	    |   PA4
+CE	    |   PB0 (default)
+IRQ	    |   NA
 
-![wiring of STM32F1 and NRF24](images/mysensors.STM32F103.bluepill+RF24接线图_bb.png?raw=true)
+![wiring of STM32F1 and NRF24](schematics/mysensors.STM32F103%20bluepill+RF24接线图.png?raw=true "wiring of STM32F1 and NRF24")
 
 ## Dependencies
 ### development

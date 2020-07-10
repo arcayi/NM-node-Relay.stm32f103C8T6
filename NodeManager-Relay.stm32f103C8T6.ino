@@ -18,15 +18,7 @@
  * version 2 as published by the Free Software Foundation.
  */
 
-/**************************
-Template
-
-This sketch can be used as a template since containing the most relevant
-MySensors library configuration settings, NodeManager's settings, all its the
-supported sensors commented out and a sketch structure fully functional to
-operate with NodeManager. Just uncomment the settings you need and the sensors
-you want to add and configure the sensors in before()
-*/
+#define ARDUINO_ARCH_STM32F1
 
 // #define BATTERY_PIN A0
 // #define BATTERY_VOLTS_PER_BIT 0.004336918
@@ -120,11 +112,11 @@ you want to add and configure the sensors in before()
 #include <sensors/SensorBattery.h>
 SensorBattery battery;
 
-// #include <sensors/SensorRelay.h>
-// // SensorRelay relay(6);
-// SensorRelay relay1(4, 1);
-// SensorRelay relay2(5, 2);
-// SensorRelay relay3(6, 3);
+#include <sensors/SensorRelay.h>
+SensorRelay relay1(PA10, 1);
+SensorRelay relay2(PA11, 2);
+SensorRelay relay3(PA12, 3);
+SensorRelay relay3(PA15, 4);
 
 /***********************************
  * Main Sketch
@@ -165,7 +157,7 @@ void before() {
   battery.setMaxVoltage(BATTERY_MAX_VOLTAGE);
 
   // set reporting interval for all the sensors to 10 minutes
-  nodeManager.setReportIntervalSeconds(10);
+  nodeManager.setReportIntervalSeconds(600);
 
   // call NodeManager before routine
   nodeManager.before();
